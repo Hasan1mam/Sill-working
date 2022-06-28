@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+
+</head>
+<body onload="slider()">
+  <div class="banner">
+    <div class="slider">
+      <img src="/slide01.jpg" id="slideimg"> 
+    </div>
+    <div class="overlay">
+      <div class="navbar">
+        <div class="logo">
+          <img src="/White Tesla Logo.png" alt="logo">
+        </div>
+        <div class="menu-icons">
+          <a href="https://twitter.com/tesla"><img src="/icons8-twitter-60.png" alt=""></a>
+          <a href="https://www.youtube.com/tesla"><img src="/icons8-youtube-logo-60.png" alt=""></a>
+          <a href="https://www.linkedin.com/company/tesla-motors"><img src="/icons8-linkedin-circled-60.png" alt=""></a>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Let's Get Stated</h1>
+        <h3>Wait for the next image </h3>
+      </div>
+    </div>
+  </div>
+  <script>
+    var slideimg = document.getElementById("slideimg");
+    var images = new Array (
+      "slide01.jpg",
+      "slide02.jpg",
+      "slide03.jpg",
+      "slide04.jpg"
+    );
+    var len= images.length;
+    var i=0;
+    function slider (){
+      if (i>len-1)
+      {
+        i=0;
+      }
+      slideimg.src = images[i];
+      i++;
+      setTimeout('slider()',3000);
+    }
+
+  </script>
+</body>
+</html>
